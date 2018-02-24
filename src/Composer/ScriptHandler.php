@@ -10,7 +10,7 @@
  */
 namespace Novactive\EzPublishToolsBundle\Composer;
 
-use Composer\Script\CommandEvent;
+use Composer\Script\Event;
 use eZ\Bundle\EzPublishCoreBundle\Composer\ScriptHandler as DistributionBundleScriptHandler;
 
 /**
@@ -21,7 +21,7 @@ class ScriptHandler extends DistributionBundleScriptHandler
     /**
      * {@inheritdoc}
      */
-    public static function dumpAssets(CommandEvent $event)
+    public static function dumpAssets(Event $event)
     {
         $options     = self::getOptions($event);
         $appDir      = $options['symfony-app-dir'];
